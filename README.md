@@ -16,15 +16,15 @@ download zip or `git clone` the repository
 
 navigate to the source directory with `cd`
 
-build with `gcc -std=c++17 -lstdc++ -dynamiclib -Os main.cpp -o libosxGlow.dylib`
+on intel-based macs, build with `gcc -std=c++17 -lstdc++ -dynamiclib -Os main.cpp -o libosxGlow.dylib`
+
+on arm-based macs, you can use rosetta2 to build by prepending `arch -x86_64` to the above command
 
 
 
 To load:
 
 run `load.command` (requires lldb)
-
-Alternatively, you could use [osxinj](https://github.com/scen/osxinj)
 
 
 
@@ -37,7 +37,7 @@ run `unload.command` (requires lldb)
 Notes:
 
 comments and credits in the code
-special thanks to Jin
+special thanks to Jin & TheArmKing
 
 todo:
 	add debug script
